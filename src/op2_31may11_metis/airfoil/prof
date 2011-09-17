@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export CUDA_PROFILE=1
+export CUDA_PROFILE_CONFIG=prof.conf
+export CUDA_PROFILE_CSV=1
+
+#./airfoil_cuda METIS_D_PART_SIZE_RES=512
+./airfoil_cuda OP_PART_SIZE_RES=256

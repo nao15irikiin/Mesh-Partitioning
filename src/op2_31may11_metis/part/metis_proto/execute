@@ -1,0 +1,20 @@
+#!/bin/sh
+
+: << '#_comment_out'
+#_comment_out
+
+# Serial Metis
+./metis PART=2 MODE=Metis Serial
+./metis PART=4 MODE=Metis Serial
+./metis PART=8 MODE=Metis Serial
+./metis PART=16 MODE=Metis Serial
+./metis PART=32 MODE=Metis Serial
+./metis PART=64 MODE=Metis Serial
+./metis PART=128 MODE=Metis Serial
+./metis PART=256 MODE=Metis Serial
+./metis PART=512 MODE=Metis Serial
+./metis PART=1024 MODE=Metis Serial
+./metis PART=2048 MODE=Metis Serial
+./metis PART=4096 MODE=Metis Serial
+
+

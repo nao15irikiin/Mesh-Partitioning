@@ -1,0 +1,3 @@
+rm -f *.o*
+rm -f *.e*
+qsub -q pqkelly qsub_script

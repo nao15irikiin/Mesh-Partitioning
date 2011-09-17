@@ -1,0 +1,10 @@
+METISLIB 	= libmetis.a
+INC		:= -I $(HOME)/Dropbox/IC_DoC/3_IndividualProject/Metis/metis-4.0.3/Lib
+LIB		:= -L $(HOME)/Dropbox/IC_DoC/3_IndividualProject/Metis/metis-4.0.3/Lib
+#LIBS		:= $(LIB)/$(METISLIB)
+#LIBS		:= -L /homes/ni10/Dropbox/IC_DoC/3_IndividualProject/Metis/metis-4.0.3 -lmetis
+LIBS = -lmetis -lm
+
+metis:part_metis.cpp
+	echo $(LIBS)
+	g++  $(INC) $(LIBS) -Wall -g part_metis.cpp -o metis

@@ -1,0 +1,192 @@
+
+// standard headers
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+#include <metis.h>
+
+enum eCellType
+{
+  CELL_TYPE_TRIANGLE = 1,
+  CELL_TYPE_TETRAHEDRAL = 2,
+  CELL_TYPE_HEXAHEDRAL = 3,
+  CELL_TYPE_QUADRILATERAL = 4
+};
+
+void readfile(int &nnode,
+	      int &ncell,
+	      int &nedge,
+	      int &nbedge,
+	      int *&cell,
+              int *&edge,
+	      int *&ecell,
+	      int *&bedge,
+	      int *&becell,
+	      int *&bound,
+	      float *&x,
+	      float *&q,
+	      float *&qold,
+	      float *&res,
+	      float *&adt){
+
+  // read in grid
+  printf("reading in grid \n");
+
+  FILE *fp;
+  if ( (fp = fopen("new_grid.dat","r")) == NULL) {
+    printf("can't open file new_grid.dat\n"); exit(-1);
+  }
+
+  if (fscanf(fp,"%d %d %d %d \n",&nnode, &ncell, &nedge, &nbedge) != 4) {
+    printf("error reading from new_grid.dat\n"); exit(-1);
+  }
+
+  printf("number of node	:%d\n", nnode);
+  printf("number of cell	:%d\n", ncell);
+  printf("number of edge	:%d\n", nedge);
+  printf("number of bedge	:%d\n", nbedge);
+
+  // cell   - mapping between cell and node (1 cell shares 4 nodes)
+  // edge   - mapping between edge and node (1 edge shares 2 nodes)
+  // ecell  - mapping between edge and cell (1 edge shares 2 cells)
+  // bedge  - mapping between ???? and node
+  // becell - mapping between ???? and cell
+  // bound  - mapping between ???? and ???
+	
+  cell   = (int *) malloc(4*ncell*sizeof(int));
+  edge   = (int *) malloc(2*nedge*sizeof(int));
+  ecell  = (int *) malloc(2*nedge*sizeof(int));
+  bedge  = (int *) malloc(2*nbedge*sizeof(int));
+  becell = (int *) malloc(  nbedge*sizeof(int));
+  bound  = (int *) malloc(  nbedge*sizeof(int));
+
+  x      = (float *) malloc(2*nnode*sizeof(float));
+  q      = (float *) malloc(4*ncell*sizeof(float));
+  qold   = (float *) malloc(4*ncell*sizeof(float));
+  res    = (float *) malloc(4*ncell*sizeof(float));
+  adt    = (float *) malloc(  ncell*sizeof(float));
+
+  // Read x coordinate
+  for (int n=0; n<nnode; n++) {
+    if (fscanf(fp,"%f %f \n",&x[2*n], &x[2*n+1]) != 2) {
+      printf("error reading x data from new_grid.dat\n"); exit(-1);
+    }
+  }
+  printf("Completed reading x data from new_grid.dat\n");
+
+  // Read cell data (cell-node) 
+  for (int n=0; n<ncell; n++) {
+    if (fscanf(fp,"%d %d %d %d \n",&cell[4*n  ], &cell[4*n+1],
+                                   &cell[4*n+2], &cell[4*n+3]) != 4) {
+      printf("error reading cell data from new_grid.dat\n"); exit(-1);
+    }
+  }
+  printf("Completed reading cell data from new_grid.dat\n");
+
+  // Read edge data (edge-node) and ecell data (edge-cell) 
+  for (int n=0; n<nedge; n++) {
+    if (fscanf(fp,"%d %d %d %d \n",&edge[2*n], &edge[2*n+1],
+                                   &ecell[2*n],&ecell[2*n+1]) != 4) {
+      printf("error reading edge and ecell data from new_grid.dat\n"); exit(-1);
+    }
+  }
+  printf("Completed reading edge and ecell data from new_grid.dat\n");
+
+  for (int n=0; n<nbedge; n++) {
+    if (fscanf(fp,"%d %d %d %d \n",&bedge[2*n],&bedge[2*n+1],
+                                   &becell[n], &bound[n]) != 4) {
+      printf("error reading bedge, becell, bound data from new_grid.dat\n"); exit(-1);
+    }
+  }
+  printf("Completed reading bedge, becell and bound data from new_grid.dat\n");
+
+  fclose(fp);
+
+}
+
+void generate_metisdata(int ncell, int nnode, int* cell, int etype, int nparts){
+
+  int celldim = 0;
+
+  int numflag=0, edgecut;
+
+  switch(etype){
+  case 1:
+    celldim = 3;
+    break;
+  case 2:
+  case 4:
+    celldim = 4;
+    break;
+  case 3:
+    celldim = 8;
+    break;
+  default:
+    return;
+  }
+
+  /*
+  fprintf(fp, "%d %d\n", ncell, type);
+  for(int i=0; i<ncell; i++){
+    for(int j=0; j<celldim; j++){
+      // need +1 since Metis expect node start from 1.
+      fprintf(fp, "%d ", cell[i*celldim + j]+1);
+    }
+    fprintf(fp, "\n");
+  }
+  */
+
+  int i, j, esize;
+  idxtype *elmnts;
+  elmnts = idxmalloc(celldim*(ncell), "ReadMesh: elmnts");
+
+  for (j=esize*(ncell), i=0; i<j; i++) {
+
+    elmnts[i]=cell[i];
+
+    /*
+    if (fscanf(fpin, "%d", elmnts+i) != 1) {
+      printf("Missing node number %d for element %d\n", i%esize+1, i/esize);
+      exit(0);
+    }
+    elmnts[i]--;
+    */
+
+  }
+
+  idxtype *epart, *npart;
+  epart  = idxmalloc(ncell, "main: epart");
+  npart  = idxmalloc(nnode, "main: npart");
+  char etypestr[4][5] = {"TRI", "TET", "HEX", "QUAD"};
+
+  printf("**********************************************************************\n");
+  printf("%s", METISTITLE);
+  printf("Mesh Information ----------------------------------------------------\n");
+  //  printf("  Name: %s, #Elements: %d, #Nodes: %d, Etype: %s\n\n", argv[1], ne, nn, etypestr[etype-1]);
+  printf("  #Elements: %d, #Nodes: %d, Etype: %s\n\n", ncell, nnode, etypestr[etype-1]);
+  printf("Partitioning Dual Graph... ------------------------------------------\n");
+
+  METIS_PartMeshDual(&ncell, &nnode, elmnts, &etype, &numflag, &nparts, &edgecut, epart, npart);
+
+  printf("  %d-way Edge-Cut: %7d, Balance: %5.2f\n", nparts, edgecut, ComputeElementBalance(ncell, nparts, epart));
+
+  printf("**********************************************************************\n");
+
+}
+
+// main program
+int main(int argc, char **argv){
+
+  int    *becell, *ecell, *bound, *bedge, *edge, *cell;
+  float  *x, *q, *qold, *adt, *res;
+  int    nnode,ncell,nedge,nbedge;
+
+  readfile(nnode, ncell, nedge, nbedge,
+	   cell, edge, ecell, bedge, becell, bound,
+	   x, q, qold, res, adt);
+
+  int npart=1000;
+  generate_metisdata(ncell, nnode, cell, CELL_TYPE_QUADRILATERAL, npart);
+
+}

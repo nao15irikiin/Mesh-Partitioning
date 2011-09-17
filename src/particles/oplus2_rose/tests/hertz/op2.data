@@ -1,0 +1,74 @@
+# Program: ./op2_cpu_timer
+# Num Iterations: 1000
+# CPU timer implementation
+ number of blocks       = 41 
+ number of block colors = 12 
+ maximum block size     = 512 
+ average thread colors  = 11.27 
+ shared memory required = 18.42 KB 
+ average data reuse     = 2.83 
+# nedge, total_one_time_cost (milliseconds), time_per_iteration, [aos_gen], [op2_init], [op2_decl], [op2_plan], compute_kernel, add_kernel, result_fetch
+20568, 65.107000, 2.171214, 6.292000, 2.667000, 37.844000, 18.304000, 0.678993, 0.519747, 0.972474
+ number of blocks       = 48 
+ number of block colors = 11 
+ maximum block size     = 512 
+ average thread colors  = 14.29 
+ shared memory required = 20.18 KB 
+ average data reuse     = 3.20 
+24118, 64.831000, 2.217187, 5.875000, 2.725000, 31.822000, 24.409000, 0.665494, 0.519879, 1.031814
+ number of blocks       = 55 
+ number of block colors = 13 
+ maximum block size     = 512 
+ average thread colors  = 15.84 
+ shared memory required = 22.64 KB 
+ average data reuse     = 3.52 
+27748, 59.059000, 2.305811, 4.596000, 2.597000, 27.769000, 24.097000, 0.697931, 0.520164, 1.087716
+ number of blocks       = 62 
+ number of block colors = 13 
+ maximum block size     = 512 
+ average thread colors  = 16.92 
+ shared memory required = 23.88 KB 
+ average data reuse     = 3.79 
+31459, 66.017000, 2.356780, 4.984000, 2.814000, 28.296000, 29.923000, 0.698254, 0.520363, 1.138163
+ number of blocks       = 68 
+ number of block colors = 13 
+ maximum block size     = 512 
+ average thread colors  = 18.09 
+ shared memory required = 25.03 KB 
+ average data reuse     = 4.02 
+34771, 73.895000, 2.401136, 5.659000, 2.684000, 32.757000, 32.795000, 0.697685, 0.520279, 1.183172
+ number of blocks       = 75 
+ number of block colors = 11 
+ maximum block size     = 512 
+ average thread colors  = 18.43 
+ shared memory required = 27.05 KB 
+ average data reuse     = 4.20 
+38125, 77.185000, 2.418157, 11.323000, 2.881000, 29.120000, 33.861000, 0.670845, 0.520106, 1.227206
+ number of blocks       = 80 
+ number of block colors = 11 
+ maximum block size     = 512 
+ average thread colors  = 18.91 
+ shared memory required = 26.91 KB 
+ average data reuse     = 4.32 
+40679, 72.426000, 2.497638, 7.330000, 2.799000, 27.668000, 34.629000, 0.690722, 0.521430, 1.285486
+ number of blocks       = 85 
+ number of block colors = 10 
+ maximum block size     = 512 
+ average thread colors  = 19.07 
+ shared memory required = 24.14 KB 
+ average data reuse     = 4.43 
+43071, 74.950000, 2.486222, 6.659000, 2.627000, 29.339000, 36.325000, 0.659007, 0.521090, 1.306125
+ number of blocks       = 88 
+ number of block colors = 9 
+ maximum block size     = 512 
+ average thread colors  = 19.33 
+ shared memory required = 15.54 KB 
+ average data reuse     = 4.50 
+44791, 89.578000, 2.618352, 14.507000, 2.615000, 31.600000, 40.856000, 0.763423, 0.523422, 1.331507
+ number of blocks       = 91 
+ number of block colors = 10 
+ maximum block size     = 512 
+ average thread colors  = 19.64 
+ shared memory required = 14.86 KB 
+ average data reuse     = 4.55 
+46334, 82.806000, 2.821721, 8.186000, 2.806000, 29.896000, 41.918000, 0.867395, 0.532382, 1.421944

@@ -1,0 +1,47 @@
+#!/bin/sh
+
+: << '#_comment_out'
+#_comment_out
+
+# Serial RCB
+./rcb LEVEL=1 MODE=Serial
+./rcb LEVEL=2 MODE=Serial
+./rcb LEVEL=3 MODE=Serial
+./rcb LEVEL=4 MODE=Serial
+./rcb LEVEL=5 MODE=Serial
+./rcb LEVEL=6 MODE=Serial
+./rcb LEVEL=7 MODE=Serial
+./rcb LEVEL=8 MODE=Serial
+./rcb LEVEL=9 MODE=Serial
+./rcb LEVEL=10 MODE=Serial
+./rcb LEVEL=11 MODE=Serial
+./rcb LEVEL=12 MODE=Serial
+
+# pthread RCB
+./rcb_th LEVEL=1 MODE=pthread
+./rcb_th LEVEL=2 MODE=pthread
+./rcb_th LEVEL=3 MODE=pthread
+./rcb_th LEVEL=4 MODE=pthread
+./rcb_th LEVEL=5 MODE=pthread
+./rcb_th LEVEL=6 MODE=pthread
+./rcb_th LEVEL=7 MODE=pthread
+./rcb_th LEVEL=8 MODE=pthread
+./rcb_th LEVEL=9 MODE=pthread
+./rcb_th LEVEL=10 MODE=pthread
+./rcb_th LEVEL=11 MODE=pthread
+./rcb_th LEVEL=12 MODE=pthread
+
+# OpenMP RCB
+./rcb_mp LEVEL=1 MODE=OpenMP
+./rcb_mp LEVEL=2 MODE=OpenMP
+./rcb_mp LEVEL=3 MODE=OpenMP
+./rcb_mp LEVEL=4 MODE=OpenMP
+./rcb_mp LEVEL=5 MODE=OpenMP
+./rcb_mp LEVEL=6 MODE=OpenMP
+./rcb_mp LEVEL=7 MODE=OpenMP
+./rcb_mp LEVEL=8 MODE=OpenMP
+./rcb_mp LEVEL=9 MODE=OpenMP
+./rcb_mp LEVEL=10 MODE=OpenMP
+./rcb_mp LEVEL=11 MODE=OpenMP
+./rcb_mp LEVEL=12 MODE=OpenMP
+

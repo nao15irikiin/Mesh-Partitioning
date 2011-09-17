@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#PBS -l mem=1gb
+#PBS -l ncpus=1
+#PBS -l ngpus=1
+#PBS -W block=true
+
+module load cuda/4.0.11
+export CUDA_VISIBLE_DEVICES=1,2,3
+export MESH_DATA_PATH=/work/ni10/airfoil-input
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda

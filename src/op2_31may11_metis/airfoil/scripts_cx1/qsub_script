@@ -1,0 +1,467 @@
+#!/bin/sh
+
+#PBS -l mem=1gb
+#PBS -l ncpus=1
+#PBS -l ngpus=1
+#PBS -W block=true
+
+module load cuda/4.0.17
+#export CUDA_VISIBLE_DEVICES=1,2,3
+export OP2_MESH_PATH=/work/ni10/airfoil-input
+export OP2_RSLT_PATH=/work/ni10/airfoil-output
+
+: << '#_comment_out'
+#_comment_out
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=128
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=256
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=384
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=512
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=640
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=768
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=896
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=1024
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=1280
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=1536
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 METIS_D_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 METIS_D_PART_SIZE_RES=1792
+
+
+
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=128
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=128
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=256
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=256
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=384
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=384
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=512
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=512
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=640
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=640
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=768
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=768
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=896
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=896
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=1024
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=1024
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=1280
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=1280
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=1536
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=1536
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 OP_PART_SIZE_RES=1792
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 OP_PART_SIZE_RES=1792
+
+
+
+
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 RCB_PART_LEVEL_RES=11
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 RCB_PART_LEVEL_RES=11
+
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 RCB_PART_LEVEL_RES=12
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 RCB_PART_LEVEL_RES=12
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 RCB_PART_LEVEL_RES=13
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 RCB_PART_LEVEL_RES=13
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=64  RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=128 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=192 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=256 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=320 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=384 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=448 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=512 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=576 RCB_PART_LEVEL_RES=14
+
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=640 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=704 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=768 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=832 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=894 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=960 RCB_PART_LEVEL_RES=14
+/work/ni10/op2_31may11_metis/airfoil/airfoil_cuda SHUFFLE OP_BLOCK_SIZE=1024 RCB_PART_LEVEL_RES=14
+
+

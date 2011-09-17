@@ -1,0 +1,25 @@
+<filename>, <mode>, <numofpart>, <RCB exec time>, <timestamp>
+../../../airfoil-input/new_grid-600-400.dat, Metis, 2, 507.652700, Sun Sep  4 11:29:04 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 4, 519.032000, Sun Sep  4 11:29:22 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 8, 518.588700, Sun Sep  4 11:29:40 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 16, 525.891900, Sun Sep  4 11:29:58 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 32, 542.729000, Sun Sep  4 11:30:16 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 64, 576.538000, Sun Sep  4 11:30:35 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 128, 636.658800, Sun Sep  4 11:30:54 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 256, 705.140400, Sun Sep  4 11:31:14 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 512, 810.102800, Sun Sep  4 11:31:35 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 1024, 984.165400, Sun Sep  4 11:31:58 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 2048, 1271.741700, Sun Sep  4 11:32:23 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 4096, 2283.848200, Sun Sep  4 11:32:59 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 2, 507.301700, Sun Sep  4 11:40:15 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 4, 515.172900, Sun Sep  4 11:40:33 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 8, 514.539300, Sun Sep  4 11:40:51 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 16, 526.654300, Sun Sep  4 11:41:09 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 32, 547.624900, Sun Sep  4 11:41:27 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 64, 574.423700, Sun Sep  4 11:41:46 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 128, 617.668700, Sun Sep  4 11:42:05 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 256, 700.618600, Sun Sep  4 11:42:25 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 512, 812.773300, Sun Sep  4 11:42:46 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 1024, 981.434800, Sun Sep  4 11:43:08 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 2048, 1280.704400, Sun Sep  4 11:43:34 2011
+../../../airfoil-input/new_grid-600-400.dat, Metis, 4096, 2278.948100, Sun Sep  4 11:44:09 2011

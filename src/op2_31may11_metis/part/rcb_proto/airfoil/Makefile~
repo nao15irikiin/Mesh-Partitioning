@@ -1,0 +1,6 @@
+
+rcb:op_rcb_main.cpp unpickle.cpp unpickle.h
+	g++ -Wall -g op_rcb_main.cpp unpickle.cpp -o rcb
+
+clean:
+	rm -f *.o rcb
